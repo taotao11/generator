@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example..generator.mapper.TbDepartmentDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example..generator.entity.TbDepartment">
+        <id column="d_id" property="dId" />
+        <result column="d_name" property="dName" />
+        <result column="d_do" property="dDo" />
+        <result column="c_id" property="cId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        d_id AS dId, d_name AS dName, d_do AS dDo, c_id AS cId
+    </sql>
+
+</mapper>
